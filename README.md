@@ -66,6 +66,10 @@ See [docs/migration-guide.md](docs/migration-guide.md) for a full export pipelin
 - **Materialize data**: `collect()` returns a sparse matrix.
 - **Tidy interop**: `as_long()` plus `samp_tbl()` and `feat_tbl()` for joining metadata.
 
+## Query metadata with `query()`
+
+Use `query()` to search metadata within a context (e.g., `by_sample()` or `by_feature()`). By default, matching is case-insensitive, so `query("soil")` will match `Soil` or `SOIL`. To opt into case-sensitive matching, set `case_sensitive = TRUE`. You can also limit matching to specific columns (for example, `columns = c("host", "site")`), and request exact matches when supported via `exact = TRUE`.
+
 ## Notes
 
 - `parqlyt` uses DuckDB’s `httpfs` extension to read Parquet from R2.

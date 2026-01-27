@@ -17,3 +17,23 @@ mat <- asv %>%
 # df_long <- as_long(mat) %>% merge(samp_tbl(mat), by = "sample_id")
 # library(ggplot2)
 # ggplot(df_long, aes(x = sample_id, y = x)) + geom_point()
+
+# Example D: metadata query
+soil_ids <- asv %>%
+  by_sample() %>%
+  query("soil")
+
+soil_ids_host_site <- asv %>%
+  by_sample() %>%
+  query("soil", columns = c("host", "site"))
+
+soil_asv <- keep_samples(asv, soil_ids)
+
+soil_asv_alt <- asv %>%
+  by_sample() %>%
+  query("soil") %>%
+  keep_samples(asv, .)
+
+soil_taxa <- asv %>%
+  by_feature() %>%
+  query("Bacteroides", columns = "taxonomy", exact = TRUE)
