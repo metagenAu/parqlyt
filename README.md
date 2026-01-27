@@ -59,6 +59,7 @@ mat <- assay_16s %>%
 - **Features path**: `r2://<bucket>/<prefix>/dim/features/assay=<assay>/*.parquet`
 
 See [docs/migration-guide.md](docs/migration-guide.md) for a full export pipeline.
+See [docs/use-cases.md](docs/use-cases.md) for example workflows.
 
 ## Common tasks
 
