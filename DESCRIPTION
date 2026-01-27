@@ -1,0 +1,24 @@
+Package: atlasr
+Title: Lazy Query Engine for Sparse Assay Atlases on R2
+Version: 0.1.0
+Authors@R: c(
+    person("Atlas", "Team", email = "team@example.org", role = c("aut", "cre"))
+)
+Description: Lazy querying and analysis of extremely large sparse assay datasets stored
+    as Parquet on Cloudflare R2 using DuckDB. Provides a pipeable DSL with margin
+    context, lazy pruning, transformations, collapses, and safe collection into
+    sparse matrices while preserving alignment invariants.
+License: MIT
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3
+Depends: R (>= 4.1)
+Imports:
+    DBI,
+    duckdb,
+    digest,
+    Matrix,
+    jsonlite
+Suggests:
+    magrittr,
+    testthat
