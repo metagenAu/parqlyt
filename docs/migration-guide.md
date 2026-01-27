@@ -1,6 +1,6 @@
 # Migration Guide: MySQL → Partitioned Parquet (staging) → Cloudflare R2
 
-This guide outlines a repeatable pipeline for exporting long-sparse assay data and metadata from MySQL to partitioned Parquet in a local staging directory, then uploading to Cloudflare R2. The goal is to produce a layout compatible with `atlasr` and DuckDB’s `read_parquet()` with Hive partitioning.
+This guide outlines a repeatable pipeline for exporting long-sparse assay data and metadata from MySQL to partitioned Parquet in a local staging directory, then uploading to Cloudflare R2. The goal is to produce a layout compatible with `parqlyt` and DuckDB’s `read_parquet()` with Hive partitioning.
 
 ## 1) R packages and helpers
 

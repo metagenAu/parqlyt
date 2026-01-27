@@ -1,4 +1,4 @@
-library(atlasr)
+library(parqlyt)
 
 # Example A: open atlas + list assays + summary query
 A <- atlas_open()
